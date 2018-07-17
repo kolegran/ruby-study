@@ -1,35 +1,35 @@
-arr = Array[621, 445, 14, 12, 159, 430, 222, 482, 44, 194, 522, 652, 494, 14, 126, 532, 387, 441, 471, 337, 
+arr = [621, 445, 14, 12, 159, 430, 222, 482, 44, 194, 522, 652, 494, 14, 126, 532, 387, 441, 471, 337, 
             446, 18, 36, 202, 574, 556, 458, 10, 16, 139, 22, 220, 107, 82, 264, 366, 501, 319, 314, 430, 55, 336, 90, 5]
 
-def numberOfElements(array)
+def number_of_elements(array)
   array.count
 end
 
-def maxElement(array)
+def max_element(array)
   array.max
 end
 
-def minElement(array)
+def min_element(array)
   array.min
 end
 
-def sortElements(array)
+def sort_elements(array)
   array.sort
 end
 
-def rmOddNumbers(array)
+def rm_odd_numbers(array)
   array.select { |i| i.even? }
 end
 
-def multipleOfThree(array)
+def multiple_of_three(array)
   array.select { |i| (i%3).zero? }
 end
 
-def uniqNumbers(array)
+def uniq_numbers(array)
   array.uniq
 end
 
-def divideAllElements(array)
+def divide_all_elements(array)
   array.map { |i| i/10.0 }
 end
 
@@ -38,35 +38,35 @@ def ascii(array)
 end
 
 def exchange(array)
-  testArr = array.clone
+  test_arr = array.clone
 
-  imin = testArr.index(testArr.min)
-  imax = testArr.index(testArr.max)
+  i_min = test_arr.index(test_arr.min)
+  i_max = test_arr.index(test_arr.max)
 
-  testArr[imin], testArr[imax] = testArr[imax], testArr[imin]
+  test_arr[i_min], test_arr[i_max] = test_arr[i_max], test_arr[i_min]
 
-  testArr
+  test_arr
 end
 
-def beforeMin(array)
-  imin = array.index(array.min)
+def range_before_min(array)
+  i_min = array.index(array.min)
 
-  array[0...imin]
+  array[0...i_min]
 end
 
-def threeMin(array)
-  (array.sort)[0...3]
+def three_min_numbers(array)
+  (array.sort)[0..2]
 end
 
-puts numberOfElements(arr)
-puts maxElement(arr)
-puts minElement(arr)
-puts sortElements(arr).join(', ')
-puts rmOddNumbers(arr).join(', ')
-puts multipleOfThree(arr).join(', ')
-puts uniqNumbers(arr).join(', ')
-puts divideAllElements(arr).join(', ')
+puts number_of_elements(arr)
+puts max_element(arr)
+puts min_element(arr)
+puts sort_elements(arr).join(', ')
+puts rm_odd_numbers(arr).join(', ')
+puts multiple_of_three(arr).join(', ')
+puts uniq_numbers(arr).join(', ')
+puts divide_all_elements(arr).join(', ')
 puts ascii(arr).join(', ')
 puts exchange(arr).join(', ')
-puts beforeMin(arr).join(', ')
-puts threeMin(arr).join(', ')
+puts range_before_min(arr).join(', ')
+puts three_min_numbers(arr).join(', ')

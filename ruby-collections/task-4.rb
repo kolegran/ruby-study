@@ -4,14 +4,14 @@ def keys(hash)
   hash.keys
 end
 
-def hashKeysArray(hash)
-  keysArray = hash.keys
+def hash_keys_array(hash)
+  keys_array = hash.keys
 end
 
-def hashValuesArray(hash)
-  valuesArray = hash.values
+def hash_values_array(hash)
+  values_array = hash.values
 end
 
 puts keys(h).join(', ')
-puts hashKeysArray(h).join(', ')
-puts hashValuesArray(h).join(', ')
+puts hash_keys_array(h).join(', ')
+puts hash_values_array(h).join(', ')

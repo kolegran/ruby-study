@@ -1,7 +1,7 @@
 array = [ ['Acolyte', 'Talon'], ['phalanx', 'Scorpion'], ['Carnifex', 'Phaeston'], ['belly', 'sun'] ]
 
-def sortByFirst(arr)
+def sort_by_first(arr)
   arr.sort_by { |i| i[0].downcase }
 end
 
-puts sortByFirst(array).join(', ')
+puts sort_by_first(array).join(', ')

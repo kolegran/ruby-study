@@ -1,5 +1,5 @@
-def reverseString(str)
+def reverse_string(str)
   str.reverse
 end
 
-puts reverseString("abcdefghigklmnopqrstuvwxyz")
+puts reverse_string("abcdefghigklmnopqrstuvwxyz")
