@@ -10,8 +10,6 @@ class FractionTester
     puts fraction_2.add(fraction_3)
     puts fraction_1.multiply(fraction_3)
     puts fraction_1.divide(fraction_2)
-
-    puts fraction_2.subtract(fraction_1).reduction_of_fraction
   end
 end
 

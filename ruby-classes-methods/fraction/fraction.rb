@@ -15,7 +15,7 @@ class Fraction
       a_numerator   = self.numerator   * fraction.denominator + fraction.numerator * self.denominator
       a_denominator = self.denominator * fraction.denominator
     end
-    Fraction.new(a_numerator, a_denominator)
+    Fraction.new(a_numerator, a_denominator).reduction_of_fraction
   end
 
   def subtract(fraction)
@@ -26,19 +26,19 @@ class Fraction
       s_numerator   = self.numerator   * fraction.denominator - fraction.numerator * self.denominator
       s_denominator = self.denominator * fraction.denominator
     end
-    Fraction.new(s_numerator, s_denominator)
+    Fraction.new(s_numerator, s_denominator).reduction_of_fraction
   end
 
   def multiply(fraction)
     m_numerator   = self.numerator   * fraction.numerator
     m_denominator = self.denominator * fraction.denominator
-    Fraction.new(m_numerator, m_denominator)
+    Fraction.new(m_numerator, m_denominator).reduction_of_fraction
   end
 
   def divide(fraction)
     d_numerator   = self.numerator   * fraction.denominator
     d_denominator = self.denominator * fraction.numerator
-    Fraction.new(d_numerator, d_denominator)
+    Fraction.new(d_numerator, d_denominator).reduction_of_fraction
   end
 
   def reduction_of_fraction
