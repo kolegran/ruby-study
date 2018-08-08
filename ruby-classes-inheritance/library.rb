@@ -12,11 +12,11 @@ class Library
   end
 
   def print_available_books
-    print(@books.select { |book| book.status == "exist" })
+    print(@books.select { |book| book.status == 'exist' })
   end
 
   def print_issued_books
-    print(@books.select { |book| book.status == "issued" })
+    print(@books.select { |book| book.status == 'issued' })
   end
 
   def print_readerlist

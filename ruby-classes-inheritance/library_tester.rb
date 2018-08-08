@@ -8,10 +8,10 @@ class LibraryTester
   def self.main
     library = Library.new
 
-    librarian = Librarian.new("John", "Doe", "male", "1 Honey St. | apt. 13", 152045)
+    librarian = Librarian.new('John', 'Doe', 'male', "1 Honey St. | apt. 13", 152045)
 
-    reader1 = Reader.new("Sam", "Baker", "male", "16 Horizon St. | apt. 21", 651701)
-    reader2 = Reader.new("Tom", "Evans", "male", "5 Oxford St. | apt. 1", 873362)
+    reader1 = Reader.new('Sam', 'Baker', 'male', "16 Horizon St. | apt. 21", 651701)
+    reader2 = Reader.new('Tom', 'Evans', 'male', "5 Oxford St. | apt. 1", 873362)
 
     book1 = Book.new("War and Peace", "Leo Tolstoy", 1342_6154_12, 1869, 1225)
     book2 = Book.new("The Picture of Dorian Gray", "Oscar Wilde", 6521_1087_56, 1890, 320)
@@ -31,15 +31,15 @@ class LibraryTester
 
     puts library.print_booklist
 
-    #take_book = reader1.invite_book_by_title(library, librarian, "War and Peace")
-    #take_book = reader1.invite_book_by_author(library, librarian, "Oscar Wilde")
-    take_book = reader1.invite_book_by_year(library, librarian, 1808)
+    take_book = reader1.request_a_book_by_title(library, librarian, "War and Peace")
+    take_book = reader1.request_a_book_by_author(library, librarian, "Oscar Wilde")
+    take_book = reader1.request_a_book_by_year(library, librarian, 1808)
     
     puts library.print_available_books
     puts library.print_issued_books
     puts "\n"
 
-    reader1.return_the_book(library, librarian, take_book)
+    reader1.return_a_book(library, librarian, take_book)
 
     puts library.print_available_books
 

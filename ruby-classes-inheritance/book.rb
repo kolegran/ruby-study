@@ -6,7 +6,7 @@ class Book
   attr_accessor :pages
   attr_accessor :status
 
-  def initialize(title, author, isbn, year, pages, status = "indefinite")
+  def initialize(title, author, isbn, year, pages, status = 'indefinite')
     @title = title
     @author = author
     @isbn = isbn
