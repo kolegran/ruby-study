@@ -2,50 +2,57 @@ class Fraction
   attr_accessor :numerator
   attr_accessor :denominator
 
-  def initialize(numerator, denominator)
-    @numerator   = numerator
+  def denominator=(denominator)
+    if denominator.zero?
+      raise "Error: cannot divide by zero!"
+    end
     @denominator = denominator
   end
 
+  def initialize(numerator, denominator)
+    @numerator   = numerator
+    self.denominator = denominator
+  end
+
   def add(fraction)
-    if self.denominator == fraction.denominator
-      a_numerator   = self.numerator + fraction.numerator
-      a_denominator = self.denominator
+    if @denominator == fraction.denominator
+      a_numerator   = @numerator + fraction.numerator
+      a_denominator = @denominator
     else
-      a_numerator   = self.numerator   * fraction.denominator + fraction.numerator * self.denominator
-      a_denominator = self.denominator * fraction.denominator
+      a_numerator   = @numerator   * fraction.denominator + fraction.numerator * @denominator
+      a_denominator = @denominator * fraction.denominator
     end
     Fraction.new(a_numerator, a_denominator).reduction_of_fraction
   end
 
   def subtract(fraction)
-    if self.denominator == fraction.denominator
-      s_numerator   = self.numerator - fraction.numerator
-      s_denominator = self.denominator
+    if @denominator == fraction.denominator
+      s_numerator   = @numerator - fraction.numerator
+      s_denominator = @denominator
     else
-      s_numerator   = self.numerator   * fraction.denominator - fraction.numerator * self.denominator
-      s_denominator = self.denominator * fraction.denominator
+      s_numerator   = @numerator   * fraction.denominator - fraction.numerator * @denominator
+      s_denominator = @denominator * fraction.denominator
     end
     Fraction.new(s_numerator, s_denominator).reduction_of_fraction
   end
 
   def multiply(fraction)
-    m_numerator   = self.numerator   * fraction.numerator
-    m_denominator = self.denominator * fraction.denominator
+    m_numerator   = @numerator   * fraction.numerator
+    m_denominator = @denominator * fraction.denominator
     Fraction.new(m_numerator, m_denominator).reduction_of_fraction
   end
 
   def divide(fraction)
-    d_numerator   = self.numerator   * fraction.denominator
-    d_denominator = self.denominator * fraction.numerator
+    d_numerator   = @numerator   * fraction.denominator
+    d_denominator = @denominator * fraction.numerator
     Fraction.new(d_numerator, d_denominator).reduction_of_fraction
   end
 
   def reduction_of_fraction
-    numbers_gcd = self.numerator.gcd self.denominator
-    self.numerator   /= numbers_gcd
-    self.denominator /= numbers_gcd
-    Fraction.new(self.numerator, self.denominator)
+    numbers_gcd = @numerator.gcd @denominator
+    @numerator   /= numbers_gcd
+    @denominator /= numbers_gcd
+    Fraction.new(@numerator, @denominator)
   end
 
   def to_s
