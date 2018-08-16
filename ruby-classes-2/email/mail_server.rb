@@ -2,9 +2,7 @@ class MailServer
   attr_accessor :name
 
   def name=(server_name)
-    if server_name == ""
-      raise "The name of the server isn\'t valid."
-    end
+    raise "The name of the server isn\'t valid." if server_name == ''
     @name = server_name
   end
 

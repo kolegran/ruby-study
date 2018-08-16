@@ -8,16 +8,14 @@ class Email
   attr_accessor :current_status
 
   def info=(info)
-    if info.empty?
-      raise "Enter the required information."
-    end
+    raise "Enter the required information." if info.empty?
     @info = info
   end
 
   def date=(date)
     if !date
       raise "Enter the date."
-    elsif date == ""
+    elsif date == ''
       raise "The date isn\'t valid."
     end
     @date = date
@@ -26,7 +24,7 @@ class Email
   def from=(from)
     if !from
       raise "Enter the sender."
-    elsif from == ""
+    elsif from == ''
       raise "The sender isn\'t valid. Enter the valid sender."
     end
     @from = from
@@ -35,7 +33,7 @@ class Email
   def to=(to)
     if !to
       raise "Enter the recipient."
-    elsif to == ""
+    elsif to == ''
       raise "The recipient isn\'t valid. Enter the valid recipient."
     end
     @to = to
