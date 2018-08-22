@@ -19,8 +19,8 @@ class Mailbox
     @emails = []
   end
 
-  def compose(subject, info)
-    new_email = Email.new(subject, info)
+  def add(new_email)
+    new_email.current_status = new_email.status[:draft]
     @emails << new_email
   end
 

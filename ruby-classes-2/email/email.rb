@@ -46,6 +46,6 @@ class Email
     self.from = info[:from]
     self.to = info[:to]
     @status = {none: 'none', draft: 'draft', sent: 'sent', inbox: 'inbox'}
-    @current_status = @status[:draft]  # by default
+    @current_status = @status[:none]  # by default
   end
 end

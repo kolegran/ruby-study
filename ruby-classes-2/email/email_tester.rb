@@ -7,9 +7,11 @@ class EmailTester
     mailbox_recipient = Mailbox.new("leon-do-vine@gmail.com", "Leonardo")
     mailbox_sender = Mailbox.new("picky-casserole@gmail.com", "Picasso")
 
-    message = "Hi Leo! Can you send me the bottle of your best vine?"
+    subject = "Hi Leo! Can you send me the bottle of your best vine?"
 
-    mailbox_sender.compose(message, date: "2018-08-16", from: mailbox_sender.user_name, to: mailbox_recipient.user_name)
+    s_email = Email.new(subject, date: "2018-08-16", from: mailbox_sender.user_name, to: mailbox_recipient.user_name)
+
+    mailbox_sender.add(s_email)
 
     server = MailServer.new('Postfix')
 
