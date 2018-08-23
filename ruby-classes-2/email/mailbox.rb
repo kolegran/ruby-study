@@ -34,13 +34,27 @@ class Mailbox
     @emails << email
   end
 
-  def print_email_list
-    @emails.each do |email|
+  def search_email_by_subject(sub_str)
+    found_subject = @emails.find_all { |email| email.subject.downcase.include?(sub_str.downcase) }
+    
+    raise "No matches on " + sub_str if found_subject.empty?
+
+    found_subject
+  end
+
+  def print_all_emails
+    raise "There are no emails" if @emails.empty?
+
+    print_emails(@emails)
+  end
+
+  def print_emails(emails_list)
+    emails_list.each do |email|
       puts "Date:".ljust(20) + email.date
       puts "From:".ljust(20) + email.from
       puts "To:".ljust(20) + email.to
       puts "Subject:".ljust(20) + email.subject
-      puts "Current status:".ljust(20) + email.current_status
+      puts "Current status:".ljust(20) + email.current_status, "\n"
     end
   end
 end
