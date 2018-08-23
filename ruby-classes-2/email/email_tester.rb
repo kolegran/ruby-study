@@ -21,7 +21,7 @@ class EmailTester
     # Send the first email
     curr_email = mailbox_sender.emails.last
     server.send_email(mailbox_recipient, mailbox_sender, curr_email)
-    
+
     # Create the second email
     subject = "Leo! Where are you?! I want a wine!"
     s_email = Email.new(subject, date: "2018-08-17", from: mailbox_sender.user_name, to: mailbox_recipient.user_name)

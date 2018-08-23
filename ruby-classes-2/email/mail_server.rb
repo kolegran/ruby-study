@@ -12,7 +12,7 @@ class MailServer
 
   def send_email(mailbox_recipient, mailbox_sender, email)
     mailbox_sender.sent(email)
-    
+
     mailbox_recipient.receive(email)
   end
 end
