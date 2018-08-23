@@ -33,15 +33,15 @@ class EmailTester
     curr_email = mailbox_sender.emails.last
     server.send_email(mailbox_recipient, mailbox_sender, curr_email)
 
-    puts "Sender\'s emails: "
-    mailbox_sender.print_all_emails
-    puts "Recipient\'s emails: "
-    mailbox_recipient.print_all_emails
-
     # Search email
     found_email = mailbox_recipient.search_email_by_subject("can")
     # Display the found email
     mailbox_recipient.print_emails(found_email)
+
+    puts "Sender\'s emails: "
+    mailbox_sender.print_all_emails
+    puts "Recipient\'s emails: "
+    mailbox_recipient.print_all_emails
   end
 end
 

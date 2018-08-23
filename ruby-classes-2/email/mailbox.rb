@@ -36,14 +36,14 @@ class Mailbox
 
   def search_email_by_subject(sub_str)
     found_subject = @emails.find_all { |email| email.subject.downcase.include?(sub_str.downcase) }
-    
-    raise "No matches on " + sub_str if found_subject.empty?
+
+    puts "No matches on " + sub_str if found_subject.empty?
 
     found_subject
   end
 
   def print_all_emails
-    raise "There are no emails" if @emails.empty?
+    puts "There are no emails\n" if @emails.empty?
 
     print_emails(@emails)
   end
