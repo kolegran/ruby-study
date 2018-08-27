@@ -3,8 +3,8 @@ class Stack
 
   attr_accessor :stack
 
-  def initialize(stack = [])
-    @stack = stack
+  def initialize
+    @stack = []
   end
 
   def pop
