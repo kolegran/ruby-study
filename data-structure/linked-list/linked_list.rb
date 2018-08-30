@@ -1,25 +1,27 @@
 class LinkedList
   attr_accessor :linked_list
+  attr_accessor :head
 
   def initialize
     @linked_list = []
+    @head = nil
   end
 
-  def list_insert(node)
+  def insert(node)
     @linked_list.unshift(node)
 
     update_pointers
   end
 
-  def list_search(key)
+  def search(key)
     elem = @linked_list.find { |k| k.key == key }
 
-    raise "The element of the list not found..." if !elem
+    puts "The element of the list not found..." if !elem
 
     elem
   end
 
-  def list_delete(found_node)
+  def delete(found_node)
     raise "The list is empty" if @linked_list.empty?
 
     @linked_list.delete(found_node)
@@ -28,14 +30,18 @@ class LinkedList
   end
 
   def print_linked_list
-    @linked_list.each { |x| print x.next.to_s.ljust(10) }
-    puts "\n"
-    @linked_list.each { |x| print x.key.to_s.ljust(10) }
-    puts "\n"
+    print "Indexes: ".ljust(15)
+    @linked_list.each { |x| print @linked_list.index(x).to_s.ljust(15) }
+    print "\n"
+    print "Keys|pointers: ".ljust(15)
+    @linked_list.each { |x| print (x.key.to_s + "|" + x.next.to_s).ljust(15) }
+    print "\n"
   end
 
 private
   def update_pointers
-    @linked_list.map { |node| node.next = @linked_list.index(node) }
+    @head = @linked_list.index(@linked_list.first)
+    @linked_list.map { |node| node.next = @linked_list.index(node)+1 }
+    @linked_list.last.next = nil
   end
 end

@@ -4,5 +4,6 @@ class Node
 
   def initialize(key)
     @key = key
+    @next = nil # by default
   end
 end

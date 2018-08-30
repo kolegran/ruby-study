@@ -11,17 +11,23 @@ class LinkedListTester
     node_3 = Node.new(1024)
     node_4 = Node.new(2048)
 
-    linked_list.list_insert(node_0)
-    linked_list.list_insert(node_1)
-    linked_list.list_insert(node_2)
-    linked_list.list_insert(node_3)
-    linked_list.list_insert(node_4)
+    linked_list.insert(node_0)
+    linked_list.insert(node_1)
+    linked_list.insert(node_2)
 
     linked_list.print_linked_list
     puts "\n\n"
-    found_elem = linked_list.list_search(256)
 
-    linked_list.list_delete(found_elem)
+    linked_list.insert(node_3)
+
+    linked_list.insert(node_4)
+
+    linked_list.print_linked_list
+    puts "\n\n"
+    
+    found_elem = linked_list.search(1024)
+
+    linked_list.delete(found_elem)
     linked_list.print_linked_list
   end
 end
