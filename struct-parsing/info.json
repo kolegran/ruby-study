@@ -1,0 +1,38 @@
+{
+    "info":{
+        "movie":{
+            "title":"Rogue One",
+            "year":2016,
+            "genres":[
+                "Action, Adventure, Sci-Fi"
+            ],
+            "runtime":133,
+            "country":"USA",
+            "language":"English"
+        },
+        "rating":{
+            "metascore":6.5,
+            "usercore":7.8,
+            "imbd":8.1,
+            "kinopoisk":7.568
+        },
+        "actor":[
+            {
+                "name":"Felicity Jones",
+                "characters":"Jyn Erso"
+            },
+            {
+                "name":"Diego Luna",
+                "characters":"Cassian Andor"
+            },
+            {
+                "name":"Alan Tudyk",
+                "characters":"K-2SO"
+            },
+            {
+                "name":"Donnie Yen",
+                "characters":"Chirrut Imwe"
+            }
+        ]
+    }
+}
