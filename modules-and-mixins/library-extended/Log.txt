@@ -1,0 +1,13 @@
+The book War and Peace, Leo Tolstoy added
+The book The Picture of Dorian Gray, Oscar Wilde added
+The book Faust, Johann Wolfgang von Goethe added
+The book War and Peace, Leo Tolstoy added
+The reader Sam Baker added
+The reader Tom Evans added
+The book War and Peace, Leo Tolstoy is exist
+The book War and Peace found by title
+The book The Picture of Dorian Gray, Oscar Wilde is exist
+The book Oscar Wilde found by author
+The book Faust, Johann Wolfgang von Goethe is exist
+The book 1808 found by year
+The book Faust, Johann Wolfgang von Goethe accepted
